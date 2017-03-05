@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- CSS Imports -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/leaflet.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+
+
+
+
+    <div class="sidebar">
+
+      <div id="page1">
+        <h1>1. Access to Healthy Food in High Poverty Area</h1>
+        <p class="paragraph">This map shows two types of access to healthy food in high poverty area: no access and low access.
+          Click the map to see the access level of each parcel. You can also click on the "Next" button to see the next page.
+        </p>
+      </div>
+
+      <div id="results" style="display: none;">
+        <h1 class="access">Access</h1>
+        <p class="paragraph">The Access Level is <span class="access">
+      </span>.</p>
+        <p class="paragraph">You can click the full view button to go back to the full view, or click the "Next" button to continue!</p>
+      </div>
+
+      <div id="page2">
+      <h1>2. Low Access</h1>
+      <p class="paragraph"> This page shows areas in high poverty where families have low access to healthy food. </p>
+      </div>
+
+      <div id="page3">
+      <h1>3. No Access<h1>
+      <p class="paragraph"> This page shows areas in high poverty where families have no access to healthy food</p>
+      </div>
+
+      <div id="page4">
+      <h1>4. Farmer Market</h1>
+      <p class="paragraph">This page shows the locations of farmer markets in Philadelphia.
+        Circles with different color indicate whether it acceps Philly Food Bucks.
+        You can click the map for more information!</p>
+        <div id="information" style="display: none;">
+        <p class="paragraph">This is <span class="name"></span>, located in <span class="neighborhood">
+        </span> neighborhood. Its address is <span class="address">
+        </span></p>
+        </div>
+
+      </div>
+
+      <div id="page5">
+        <h1>5. Search by Zip Code</h1>
+        <p class="paragraph">Now you can search farmer markets in a specific zip code area! Input the zip code and click on "Search".
+          But when you search another zip code area, your previous search will not be cleared unless you click "Clear search" </p>
+        <br>
+        <label id="zipcode" for="zipcode-input">Please Input the Zipcode</label>
+        <input type="number" id="zipcode-input">
+        <input type="button" id="search" value="Search"></input>
+        <input type="button" id="Show" value="Clear search"></input>
+        <br>
+      </div>
+
+      <div id="page6">
+        <h1>6. Explore Neighborhoods</h1>
+        <p class="paragraph">By clicking the neighborhood you are interested in, you can know more! </p>
+        <br>
+        <input type="button" id="CenterCity" value="Center City"></input>
+        <input type="button" id="NorthPhilly" value="North Philadelphia"></input>
+        <input type="button" id="WestPhilly" value="West Philadelphia"></input>
+        <input type="button" id="UniversityCity" value="University City"></input>
+        <br>
+      </div>
+
+      <div class='button'>
+      <input type="button" id="buttonPre" value="Previous"></input>
+      <input type="button" id="buttonNext" value="Next"></input>
+      <input type="button" id="Fullview" value="Full View"></input>
+      </div>
+    </div>
+
+
+
+    <div id="map" class="map"></div>
+
+    <div class="legend1">
+      <h1>Legend</h1>
+      <table>
+      <tr>
+      <td><div id="No_Access"></div></td>
+      <td id="legendcontent">No Access</td>
+      </tr>
+      <tr>
+      <td><div id="Low_Access"></div></td>
+      <td id="legendcontent">Low Access</td>
+      </tr>
+      <tr>
+      </table>
+    </div>
+
+    <div class="legend2">
+      <h1>Legend</h1>
+      <table>
+      <tr>
+      <td><div id="No_Access"></div></td>
+      <td id="legendcontent">No Access</td>
+      </tr>
+      <tr>
+      <td><div id="Low_Access"></div></td>
+      <td id="legendcontent">Low Access</td>
+      </tr>
+      <tr>
+      <td><div id="Accept"></div></td>
+      <td id="legendcontent">Accept Philly Food Bulks</td>
+      </tr>
+      <tr>
+      <td><div id="NoAccept"></div></td>
+      <td id="legendcontent">Don't accept Philly Food Bulks</td>
+      </tr>
+    </table>
+    </div>
+
+    <script src="js/jquery-2.2.0.js"></script>
+    <script src="js/underscore.js"></script>
+    <script src="js/leaflet.js"></script>
+    <script src="js/Layers.js"></script>
+    <script src="js/midtermFunctions.js"></script>
+    <script src="js/SwitchSlides.js"></script>
+  </body>
+</html>
